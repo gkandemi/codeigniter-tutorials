@@ -76,6 +76,17 @@ class Welcome extends CI_Controller {
 	    $this->load->view("personel_listesi", $viewData);
 	}
 
+	//sitename/controllerAdi/metotAdi
+    // http://localhost/codeigniter/tutorials/controllerAdi/metotAdi/parametre/parametre/parametre
+
+	public function getMessage(){
+        echo "Burasi diger metottur!!!";
+    }
+
+    public function deneme(){
+        echo "kablosuzkedi";
+    }
+
 }
 
 /* End of file welcome.php */
