@@ -4,7 +4,6 @@ class Detay extends CI_Controller {
 
 
     public function index(){
-
         echo "Detay Controllerinin index metotu";
     }
 
