@@ -206,4 +206,63 @@ class Dbislem extends CI_Controller {
 
         echo $delete;
     }
+
+    public function model(){
+
+        $this->load->model("personel_model");
+
+        $results = $this->personel_model->get();
+
+        print_r($results);
+
+        $delete = $this->personel_model->delete(6);
+
+        echo $delete;
+
+    }
+    public function model_usage(){
+
+        $this->load->model("personel_model");
+
+        // Veri Cekme
+//        $result = $this->personel_model->get(array("id >" => 1));
+//        $result = $this->personel_model->get_all(array("id <=" => 1));
+//        print_r($result);
+
+        // Veri Silme
+//        $delete = $this->personel_model->delete(array("id" => 16));
+//        echo $delete;
+
+        // Veri Ekleme
+
+        $data = array(
+            "title"     => "Tayfun Er",
+            "detail"    => "Cok Delikanli bir adam!!"
+        );
+
+        $insert = $this->personel_model->insert($data);
+//        echo $insert;
+
+        // Veri Guncelleme
+
+//        $data = array(
+//            "title"     => "Felakettin",
+//        );
+//
+//        $where = array(
+//            "id"    => 18
+//        );
+//
+//        $update = $this->personel_model->update($data,$where);
+//        echo $update;
+
+        // Custom Query
+//        $query = $this->personel_model->query("SELECT * from personel LIMIT 1");
+//        print_r($query);
+
+        // Last insert id
+        echo $this->personel_model->get_last_id();
+
+    }
+
 }
