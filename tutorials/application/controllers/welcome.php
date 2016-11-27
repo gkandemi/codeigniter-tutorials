@@ -87,6 +87,12 @@ class Welcome extends CI_Controller {
         echo "kablosuzkedi";
     }
 
+    public function helper_test(){
+
+        get_full_date(date("Y-m-d"));
+
+    }
+
 }
 
 /* End of file welcome.php */
